@@ -20,6 +20,7 @@ class PasienTableSeeder extends Seeder
         $pasien->nama = "Ahmad Rifai";
         $pasien->alamat = "Rejosari";
         $pasien->no_hp = "085155380996";
+        $pasien->keluhan = "Keluhan";
         $pasien->save();
 
     }

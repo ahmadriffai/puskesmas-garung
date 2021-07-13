@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-12">
-        <h3 class="text-success text-center">Antrian Atas Nama {{ $antrian->nama }}</h3>
+        <h3 class="text-success text-center">Antrian Atas Nama {{ $antrian->pasien->nama }}</h3>
     </div>
     <hr>
 </div>

@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+Route::get('/', 'HomeController@index')->name('home.index');
 
 Route::resource('/antrian','AntrianController')->only('index','store', 'show');
+
+Route::get('/daftar/{idLayanan}', 'DaftarController@index')->name('daftar.index');
+Route::post('/daftar', 'DaftarController@store')->name('daftar.store');
+Route::post('/ambilAntrian', 'DaftarController@ambilAntrian')->name('daftar.ambilAntrian');
+

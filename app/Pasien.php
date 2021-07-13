@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Pasien extends Model
 {
@@ -16,7 +17,13 @@ class Pasien extends Model
         'nik',
         'nama',
         'alamat',
-        'no_hp'
+        'no_hp',
+        'keluhan'
     ];
+
+    public function antrian()
+    {
+        return $this->belongsTo('App\Antrian', 'nik');
+    }
 
 }

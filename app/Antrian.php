@@ -12,6 +12,11 @@ class Antrian extends Model
 
     protected $fillable = [
         'nomer_antrian',
-        'nama'
+        'nik'
     ];
+
+    public function pasien()
+    {
+        return $this->belongsTo('App\Pasien', 'nik');
+    }
 }

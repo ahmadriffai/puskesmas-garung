@@ -16,7 +16,11 @@ class CreateAntrianTable extends Migration
     {
         Schema::create('antrian', function (Blueprint $table) {
             $table->increments('nomer_antrian');
-            $table->string('nama');
+            $table->string('nik', 20);
+            $table->foreign('nik')
+                        ->references('nik')
+                        ->on('pasien')
+                        ->onDelete('cascade');
             $table->timestamps();
         });
     }

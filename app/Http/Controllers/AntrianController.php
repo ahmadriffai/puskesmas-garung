@@ -23,9 +23,7 @@ class AntrianController extends Controller
         return redirect()->route('antrian.show',['antrian' => $antrian->nomer_antrian]);
     }
 
-    public function show($nomer_antrian){
-        $antrian = Antrian::find($nomer_antrian);
-
+    public function show(Antrian $antrian){
         return view('antrian.show', ['antrian' => $antrian]);
     }
 
