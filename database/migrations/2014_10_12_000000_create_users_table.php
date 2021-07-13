@@ -33,4 +33,9 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
     }
+
+    public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
 }
