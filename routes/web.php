@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::resource('/antrian','AntrianController')->only('index','store', 'show');
