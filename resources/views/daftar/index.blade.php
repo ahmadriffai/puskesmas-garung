@@ -5,9 +5,14 @@
 
 @section('content')
 
+@error('nik1')
+    <div class="alert alert-warning" role="alert">
+        Anda Sudah Mengambil Antrian
+    </div>
+@enderror
 @error('nik')
     <div class="alert alert-warning" role="alert">
-        {{ $message }}
+        Anda Sudah Pernah Mendaftar Silahkan Langsung Ambil Antrian
     </div>
 @enderror
 
@@ -57,7 +62,7 @@
                         <div class="mb-3">
                             <input
                                 type="text"
-                                name="nik"
+                                name="nik1"
                                 class="form-control rounded-pill px-4 py-2 border-0 text-secondary
                                 @error('nik')
                                 is-invalid

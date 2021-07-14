@@ -19,3 +19,9 @@ Route::get('/daftar/{idLayanan}', 'DaftarController@index')->name('daftar.index'
 Route::post('/daftar', 'DaftarController@store')->name('daftar.store');
 Route::post('/ambilAntrian', 'DaftarController@ambilAntrian')->name('daftar.ambilAntrian');
 
+Route::get('/login', 'AuthController@index')->name('auth.index');
+Route::post('/login', 'AuthController@login')->name('auth.login');
+
+Route::get('/admin', 'Admin\HomeController@index')->name('admin.index');
+
+

@@ -18,6 +18,7 @@ class Pasien extends Model
         'nama',
         'alamat',
         'no_hp',
+        'id_layanan',
         'keluhan'
     ];
 

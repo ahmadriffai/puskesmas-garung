@@ -43,22 +43,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href=" {{ route('home.index')}} ">Home</a>
+                        <a class="nav-link active" aria-current="page" href=" {{ route('home.index')}} ">Info Kesehatan</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href=" {{ route('home.index')}}#tentang ">Tentang</a>
-                        </li>
+                        <a class="nav-link" href=" {{ route('home.index')}}">Antrian Pasien</a>
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home.index')}}#infoKesehatan ">Info Kesehatan</a>
+                            <a class="nav-link btn btn-light text-success px-3" href="{{ route('home.index') }}">Logout</a>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-light text-success px-3" href="{{ route('auth.login') }}">Login</a>
-                        </li>
-
                     </ul>
                 </div>
             </div>

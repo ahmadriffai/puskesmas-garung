@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         $this->call(PasienTableSeeder::class);
         $this->call(LayananTableSeeder::class);
+        $this->call(InfoKesTableSeeder::class);
+        $this->call(UserTableSeeder::class);
+
         Antrian::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }

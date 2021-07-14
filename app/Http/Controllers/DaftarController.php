@@ -35,6 +35,7 @@ class DaftarController extends Controller
             $pasien->nama = $request->nama;
             $pasien->no_hp = $request->no_hp;
             $pasien->alamat = $request->alamat;
+            $pasien->id_layanan = $request->idLayanan;
             $pasien->keluhan = $request->keluhan;
             $pasien->save();
 
@@ -56,7 +57,7 @@ class DaftarController extends Controller
 
     public function ambilAntrian(Request $request){
         $request->validate([
-            'nik' => 'required|unique:antrian,nik',
+            'nik1' => 'required|unique:antrian,nik',
         ]);
 
         DB::beginTransaction();
@@ -66,8 +67,9 @@ class DaftarController extends Controller
             $antrian->nik = $request->nik;
             $antrian->save();
 
-            $pasien = Pasien::where('nik', $request->nik);
+            $pasien = Pasien::where('nik1', $request->nik);
             $pasien->update([
+                'id_layanan' => $request->idLayanan,
                 'keluhan' => $request->keluhan
             ]);
 
