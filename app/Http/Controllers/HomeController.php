@@ -13,8 +13,17 @@ class HomeController extends Controller
     public function index()
     {
         $layanan = Layanan::all();
+        return view('home.index', ['layanan' => $layanan]);
+    }
+
+    public function infokes()
+    {
         $infoKes = InfoKes::all();
-        return view('home.index', ['layanan' => $layanan, 'infoKes' => $infoKes]);
+        return view('home.infokes', ['infoKes' => $infoKes]);
+    }
+    public function about()
+    {
+        return view('home.about');
     }
 
 }

@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home.index');
+Route::get('/about', 'HomeController@about')->name('home.about');
+Route::get('/infokes', 'HomeController@infokes')->name('home.infokes');
+
 
 Route::resource('/antrian','AntrianController')->only('index','store', 'show');
 

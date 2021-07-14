@@ -46,10 +46,10 @@
                         <a class="nav-link active" aria-current="page" href=" {{ route('home.index')}} ">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href=" {{ route('home.index')}}#tentang ">Tentang</a>
+                        <a class="nav-link" href=" {{ route('home.about')}} ">Tentang</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home.index')}}#infoKesehatan ">Info Kesehatan</a>
+                        <a class="nav-link" href="{{ route('home.infokes')}} ">Info Kesehatan</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#">Kontak</a>
